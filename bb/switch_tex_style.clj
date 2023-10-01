@@ -4,6 +4,8 @@
 (require '[babashka.fs :as fs])
 (require '[babashka.process :as ps])
 
+(def ^:private version "0.3.1")
+
 (defn hello
   []
   (println "hello, world!"))
