@@ -1,0 +1,15 @@
+{:paths ["bb"]
+
+ :deps  {}
+
+ :aliases
+ {:neil
+  {:project {:name punctuation-marks/punctuation-marks}}}
+
+ :tasks
+ {:requires (switch-tex-style)
+  hello (switch-tex-style/hello)
+  gaku (switch-tex-style/-main "--gaku" "resources")
+  my (switch-tex-style/-main "-my" "resources")}
+
+ }
