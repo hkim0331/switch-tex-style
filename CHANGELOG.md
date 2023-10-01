@@ -3,6 +3,9 @@
 ## Unreleased
 - usage またはヘルプメッセージ。
 - babashka の aliases や tasks などがまだわかっていない。
+- dir を引数にとるよりはシェルを信頼して _*.tex の方がいいんじゃね？
+  hajimeni.tex とsample.tex が毎回 git に引っ掛かるなどして面倒くさいぞ。
+  -> .gitignore に足しとけばいいか。
 
 ## 0.3.1 - 2023-10-01
 - プロジェクト名 switch-tex-style に変更。
