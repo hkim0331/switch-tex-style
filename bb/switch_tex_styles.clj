@@ -1,14 +1,19 @@
 #!/usr/bin/env bb
 
-(ns switch-tex-style)
+(ns switch-tex-styles)
+
 (require '[babashka.fs :as fs])
 (require '[babashka.process :as ps])
 
-(def ^:private version "0.3.1")
+(def ^:private version "0.3.2")
 
-(defn hello
+(defn usage
   []
-  (println "hello, world!"))
+  (println "switch-tex-styles version" version)
+  (println "usage: switch-tex-styles {--gaku|--my} dir")
+  (println "  ファイル dir/*.tex の句読点、全角半角間のスペースを調整する。")
+  (println "  --gaku 句読点は 「.,」を使い、全角半角間のスペースを削除。")
+  (println "  --my 句読点は 「。、」を使い、全角半角間にスペースを入れる。"))
 
 (defn tex-files
   "tex files in dir."
@@ -69,7 +74,7 @@
           (do
             (doall (pmap ->my files))
             (doall (pmap insert-space files)))
-          (println "usage?")))
-      (println "usage: switch-tex-style {--gaku|--my} dir"))))
+          (usage)))
+      (usage))))
 
 (-main)

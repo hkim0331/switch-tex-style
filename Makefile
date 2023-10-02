@@ -1,15 +1,15 @@
 APP=switch_tex_styles.clj
-DEST=${HOME}/teaching/2023-python/tex/bin
+GAKU=${HOME}/teaching/2023-python/tex/bin
 
 .PHONY: all install clean install-bin
 
 all: install install-bin
 
-install:
-	cp bb/${APP} ${DEST}/${APP}
-	chmod +x ${DEST}/${APP}
+install-gaku:
+	cp bb/${APP} ${GAKU}/switch-tex-styles
+	chmod +x ${GAKU}/switch-tex-styles
 
-install-bin:
+install:
 	cp bb/${APP} ~/bin/switch-tex-styles
 	chmod +x ~/bin/switch-tex-styles
 

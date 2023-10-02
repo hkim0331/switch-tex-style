@@ -1,26 +1,26 @@
 # punctuation-marks
 
-texファイルの句読点を調整する．
+tex ファイルの句読点を調整する。
 
-* --gaku, -gで学術図書スタイルに．
-* --hkimura, -hでhkimuraスタイルに．--helpとかぶるか？
-*全角半角の境界でスペースを入れるかどうかを判定できないか．
+* --gaku, -g で学術図書スタイルに。
+* --hkimura, -h で hkimura スタイルに。 --help とかぶるか？
+* 全角半角の境界でスペースを入れるかどうかを判定できないか。
 
 ## https://qiita.com/richmikan@github/items/7c0f0eb03e5affd645a3
--全角文字の正規表現[^\x01-\x7E]
+- 全角文字の正規表現 [^\x01-\x7E]
 
-- LANG=ja_JP.UTF8のもとで，
+- LANG=ja_JP.UTF8 のもとで、
 
 ```shell
-$ echo 'MSXＭＳＸ２　ＭＳＸ２＋' | sed 's/[[:alnum:]]/*/g'
-*** ****　****＋
-$ echo 'MSXＭＳＸ２　ＭＳＸ２＋' | awk '{gsub(/[[:alnum:]]/,"*");print}'
-*** ****　****＋
+$ echo 'MSX ＭＳＸ２　ＭＳＸ２＋ ' | sed 's/[[:alnum:]]/*/g'
+*** **** 　 **** ＋
+$ echo 'MSX ＭＳＸ２　ＭＳＸ２＋ ' | awk '{gsub(/[[:alnum:]]/,"*");print}'
+*** **** 　 **** ＋
 $
 
-$ echo 'MSXＭＳＸ２　ＭＳＸ２＋' | sed 's/[[:blank:]]/*/g'
-MSX*ＭＳＸ２*ＭＳＸ２＋
-$ echo 'MSXＭＳＸ２　ＭＳＸ２＋' | awk '{gsub(/[[:alnum:]]/,"*");print}'
-MSX*ＭＳＸ２*ＭＳＸ２＋
+$ echo 'MSX ＭＳＸ２　ＭＳＸ２＋ ' | sed 's/[[:blank:]]/*/g'
+MSX* ＭＳＸ２ * ＭＳＸ２＋
+$ echo 'MSX ＭＳＸ２　ＭＳＸ２＋ ' | awk '{gsub(/[[:alnum:]]/,"*");print}'
+MSX* ＭＳＸ２ * ＭＳＸ２＋
 $
 ```
