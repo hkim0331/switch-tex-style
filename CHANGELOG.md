@@ -1,15 +1,16 @@
 # switch-tex-style
 
 ## Unreleased
-- usage またはヘルプメッセージ。
 
-## 0.3.2-snapshot
+## 0.3.2 - 2023-10-02
+### Changed
+- インストール先でのスクリプト名は switch-tex-styles とする。
 - プロジェクト名を swith-tex-styles に変更（複数形）。
 - make install-bin
   スクリプトファイル `switch_tex_styles.clj` を
   拡張子 .clj をとったケバブスタイルの switch-tex-styles で ~/bin にインストール。
 - make install は ~/bin に、学術図書フォルダへは make install-gaku とする。
-
+- (usage) を定義。
 
 ## 0.3.1 - 2023-10-01
 - プロジェクト名 switch-tex-style に変更。

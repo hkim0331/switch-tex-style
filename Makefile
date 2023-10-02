@@ -3,7 +3,7 @@ GAKU=${HOME}/teaching/2023-python/tex/bin
 
 .PHONY: all install clean install-bin
 
-all: install install-bin
+all: install install-gaku
 
 install-gaku:
 	cp bb/${APP} ${GAKU}/switch-tex-styles
