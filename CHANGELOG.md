@@ -2,10 +2,15 @@
 
 ## Unreleased
 - usage またはヘルプメッセージ。
-- babashka の aliases や tasks などがまだわかっていない。
+
+## 0.3.2-snapshot
+- プロジェクト名を swith-tex-styles に変更（複数形）。
+- make install-bin
+  スクリプトを .clj をとってケバブスタイルの switch-tex-styles で ~/bin にインストール。
 
 ## 0.3.1 - 2023-10-01
 - プロジェクト名 switch-tex-style に変更。
+- スクリプト名は `switch_tex_style.clj` でいいか？
 - added bump-version.sh
 
 ## 0.3.0 - 2023-10-01
