@@ -1,5 +1,8 @@
 #!/usr/bin/env bb
 
+;; FIXME:
+;; - \item 全角文字を \item全角文字にしてはいけない。2023-10-09
+
 (ns switch-tex-styles)
 
 (require '[babashka.fs :as fs])
